@@ -3,6 +3,7 @@ package com.example.tourguide.Controller;
 import com.example.tourguide.Entity.*;
 import com.example.tourguide.Service.AccommodationService;
 import com.example.tourguide.Service.PlaceService;
+import com.example.tourguide.Service.RestaurantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -11,15 +12,16 @@ import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/guide")
-public class GuideController {
+@RequestMapping("/admin")
+public class AdminController {
 
     private final PlaceService placeService;
+    private final RestaurantService restaurantService;
 
     private final AccommodationService accommodationService;
 
     @PostMapping("/addPlace")
-    public ResponseEntity<String> addPlace(@RequestBody Place place){
+    public ResponseEntity<String> addPlace(@RequestBody Place place) {
         String str=placeService.addPlace(place);
         return ResponseEntity.ok(str);
     }
@@ -61,6 +63,14 @@ public class GuideController {
         return ResponseEntity.status(200).body(placesList);
     }
 
+    @GetMapping("/getAllRestaurants/{placeName}")
+    public ResponseEntity<?> getAllRestaurants(@PathVariable("placeName") String name){
+        List<Restaurant> restaurantList=placeService.getAllRestaurants(name);
+        if(restaurantList.size()==0)
+            return ResponseEntity.status(400).body("No places found here.");
+        return ResponseEntity.status(200).body(restaurantList);
+    }
+
     @PostMapping("/addActivityForPlace")
     public ResponseEntity<String> addActivityForPlace(@RequestBody Activities activities){
         String str=placeService.addActivityForPlace(activities);
@@ -88,4 +98,26 @@ public class GuideController {
             return ResponseEntity.status(400).body("No places found here.");
         return ResponseEntity.status(200).body(foodsList);
     }
+
+    @PostMapping("/addRestaurantInAPlace")
+    public ResponseEntity<String> addRestaurantInAPlace(@RequestBody Restaurant restaurant){
+        String str=restaurantService.addRestaurant(restaurant);
+        return ResponseEntity.status(200).body(str);
+    }
+
+    @PostMapping("/addReviewsForRestaurant")
+    public ResponseEntity<String> addReviewsForRestaurant(@RequestBody RestaurantReviews reviews){
+        String str=restaurantService.addReviewsForRestaurant(reviews);
+        return ResponseEntity.status(200).body(str);
+    }
+
+    @GetMapping("/getAllReviews/{restaurantName}")
+    public ResponseEntity<?> getAllReviews(@PathVariable("restaurantName") String restaurantName){
+        List<RestaurantReviews> reviewsList=restaurantService.getAllReviews(restaurantName);
+        if(reviewsList.size()==0)
+            return ResponseEntity.status(400).body("No places found here.");
+        return ResponseEntity.status(200).body(reviewsList);
+    }
+
+
 }

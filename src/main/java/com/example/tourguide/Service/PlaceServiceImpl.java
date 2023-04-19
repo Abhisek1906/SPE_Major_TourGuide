@@ -1,16 +1,16 @@
 package com.example.tourguide.Service;
 
-import com.example.tourguide.Entity.Activities;
-import com.example.tourguide.Entity.Foods;
-import com.example.tourguide.Entity.OffBeatPlaces;
-import com.example.tourguide.Entity.Place;
+import com.example.tourguide.Entity.*;
 import com.example.tourguide.Repository.ActivitiesRepo;
 import com.example.tourguide.Repository.FoodsRepo;
 import com.example.tourguide.Repository.OffBeatPlacesRepo;
 import com.example.tourguide.Repository.PlaceRepo;
+
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import java.io.IOException;
 import java.util.List;
 import java.util.Optional;
 
@@ -25,7 +25,8 @@ public class PlaceServiceImpl implements PlaceService{
 
     private final FoodsRepo foodsRepo;
     @Override
-    public String addPlace(Place place) {
+    public String addPlace(Place place)  {
+
         Place place1=placeRepo.save(place);
         if(place1!=null)
             return "Success!";
@@ -81,4 +82,12 @@ public class PlaceServiceImpl implements PlaceService{
         Place place=placeRepo.findByName(name);
         return place.getFoodsList();
     }
+
+    @Override
+    public List<Restaurant> getAllRestaurants(String name) {
+        Place place=placeRepo.findByName(name);
+        return place.getRestaurantList();
+    }
+
+
 }
