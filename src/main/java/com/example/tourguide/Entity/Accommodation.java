@@ -17,7 +17,7 @@ public class Accommodation {
     private int id;
 
     private String type;
-
+    @Column(unique = true)
     private String name;
     private String address;
 

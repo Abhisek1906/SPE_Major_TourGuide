@@ -46,4 +46,9 @@ public class Place {
     @JsonIgnore
     private List<Foods> foodsList;
 
+    @OneToMany(mappedBy = "place")
+    @JsonManagedReference
+    @JsonIgnore
+    private List<Restaurant> restaurantList;
+
 }

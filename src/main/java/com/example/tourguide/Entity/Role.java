@@ -1,6 +1,6 @@
 package com.example.tourguide.Entity;
 
 public enum Role {
-    ADMIN,
-    USER
+    ROLE_USER,
+    ROLE_ADMIN
 }
