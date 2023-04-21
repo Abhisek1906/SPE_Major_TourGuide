@@ -3,6 +3,7 @@ package com.example.tourguide.Controller;
 import com.example.tourguide.Entity.*;
 import com.example.tourguide.Service.AccommodationService;
 import com.example.tourguide.Service.PlaceService;
+import com.example.tourguide.Service.RegionService;
 import com.example.tourguide.Service.RestaurantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
@@ -18,6 +19,7 @@ public class AdminController {
     private final PlaceService placeService;
     private final RestaurantService restaurantService;
 
+    private final RegionService regionService;
     private final AccommodationService accommodationService;
 
     @PostMapping("/addPlace")
@@ -117,6 +119,12 @@ public class AdminController {
         if(reviewsList.size()==0)
             return ResponseEntity.status(400).body("No places found here.");
         return ResponseEntity.status(200).body(reviewsList);
+    }
+
+    @PostMapping("/addRegions")
+    public ResponseEntity<String> addRegions(@RequestBody List<Region> regions){
+        String str=regionService.addRegions(regions);
+        return ResponseEntity.status(200).body(str);
     }
 
 
