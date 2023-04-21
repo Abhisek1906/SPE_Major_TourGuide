@@ -84,6 +84,7 @@
                 </configuration>
             </plugin>
         </plugins>
+        <finalName>SPE-MAJOR</finalName>
     </build>
 
 </project>
