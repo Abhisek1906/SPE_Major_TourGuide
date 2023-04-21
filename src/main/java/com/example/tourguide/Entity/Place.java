@@ -1,5 +1,6 @@
 package com.example.tourguide.Entity;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
@@ -50,5 +51,10 @@ public class Place {
     @JsonManagedReference
     @JsonIgnore
     private List<Restaurant> restaurantList;
+
+    @ManyToOne(fetch= FetchType.EAGER)
+    @JoinColumn(name = "region_id",nullable = false)
+    @JsonBackReference
+    private Region region;
 
 }
