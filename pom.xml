@@ -84,7 +84,7 @@
                 </configuration>
             </plugin>
         </plugins>
-        <finalName>SPE-MAJOR</finalName>
+        <finalName>spe-major-backend</finalName>
     </build>
 
 </project>
