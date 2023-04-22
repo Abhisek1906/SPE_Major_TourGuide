@@ -7,10 +7,7 @@ import com.example.tourguide.Service.RegionService;
 import com.example.tourguide.Service.RestaurantService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -86,5 +83,19 @@ public class UserController {
         if(places.size()==0)
             return ResponseEntity.status(400).body("No places found here.");
         return ResponseEntity.status(200).body(places);
+    }
+
+    @PostMapping("/addReviewForAccommodation")
+    public ResponseEntity<String> addReviewForAccommodation(@RequestBody AccommodationReviews review){
+        String str=accommodationService.addReviewsForRestaurant(review);
+        return ResponseEntity.status(200).body(str);
+    }
+
+    @GetMapping("/getHotelReviews/{hotelName}")
+    public ResponseEntity<?> getHotelReviews(@PathVariable("hotelName") String hotelName){
+        List<AccommodationReviews> reviewsList=accommodationService.getHotelReviews(hotelName);
+        if(reviewsList.size()==0)
+            return ResponseEntity.status(400).body("No reviews found here.");
+        return ResponseEntity.status(200).body(reviewsList);
     }
 }

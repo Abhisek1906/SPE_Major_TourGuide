@@ -6,4 +6,5 @@ import org.springframework.stereotype.Repository;
 
 @Repository
 public interface AccommodationRepo extends JpaRepository<Accommodation,Integer> {
+    Accommodation findByName(String name);
 }
