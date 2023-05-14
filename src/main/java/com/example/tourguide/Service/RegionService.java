@@ -9,4 +9,6 @@ public interface RegionService {
     String addRegions(List<Region> regions);
 
     List<Place> getAllPlaces(String regionName);
+
+    List<Region> getAllRegions();
 }
