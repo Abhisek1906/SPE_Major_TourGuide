@@ -31,6 +31,9 @@ public class OffBeatPlaces {
 
     private String byBusRoute;
 
+    private String images;
+
+
     @ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name = "place_id",nullable = false)
     @JsonBackReference

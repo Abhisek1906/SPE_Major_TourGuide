@@ -28,6 +28,35 @@ public class Restaurant {
 
     private String type;
 
+    private String images;
+    private int starRating;
+    private String typeOfCuisines;
+    private String menuLink;
+    private String mapLocation;
+
+    private String phoneNo;
+    private String description;
+
+    private String specialDiets;
+
+    // service options
+    private boolean noContactDelivery;
+    private boolean takeaway;
+    private boolean dineIn;
+
+    //offerings
+    private boolean unlimited;
+    private boolean kidsMenu;
+    private boolean veganOptions;
+    private boolean vegetarianOptions;
+
+    //amenities
+    private boolean goodForKids;
+    private boolean highChairs;
+    private boolean toilets;
+    private boolean freeWifi;
+
+
     @ManyToOne(fetch= FetchType.EAGER)
     @JoinColumn(name = "place_id",nullable = false)
     @JsonBackReference
