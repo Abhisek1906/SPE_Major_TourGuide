@@ -32,6 +32,10 @@ public class Place {
     @Column(nullable = false)
     private String customs;
 
+    private String description;
+
+    private String images;
+
     @OneToMany(mappedBy = "place")
     @JsonManagedReference
     @JsonIgnore

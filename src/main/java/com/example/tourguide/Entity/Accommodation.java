@@ -28,6 +28,30 @@ public class Accommodation {
     private String number;
     private String rate;
 
+    private String images;
+
+    private String mapLocation;
+
+    private int starRating;
+
+    private String phoneNo;
+
+    private String description;
+
+    private boolean parking;
+    private boolean internet;
+    private boolean pool;
+    private boolean fitnessCenter;
+    private boolean bar;
+    private boolean taxiService;
+
+    private boolean bathRobes;
+    private boolean airConditioning;
+    private boolean additionalBathroom;
+    private boolean desk;
+    private boolean dinningArea;
+    private boolean cable;
+
     @ManyToOne(fetch = FetchType.EAGER)
     @JsonBackReference
     @JoinColumn(name = "accommodation_id",nullable = false)
