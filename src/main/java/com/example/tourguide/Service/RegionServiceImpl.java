@@ -24,4 +24,9 @@ public class RegionServiceImpl implements RegionService{
         Region region=regionRepo.findByRegionName(regionName);
         return region.getPlaceList();
     }
+
+    @Override
+    public List<Region> getAllRegions() {
+        return regionRepo.findAll();
+    }
 }

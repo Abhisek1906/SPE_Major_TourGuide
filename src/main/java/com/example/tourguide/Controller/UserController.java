@@ -98,4 +98,10 @@ public class UserController {
             return ResponseEntity.status(400).body("No reviews found here.");
         return ResponseEntity.status(200).body(reviewsList);
     }
+
+    @GetMapping("/getAllRegions")
+    public ResponseEntity<List<Region>> getAllRegions(){
+        List<Region> regionList=regionService.getAllRegions();
+        return ResponseEntity.ok(regionList);
+    }
 }
