@@ -16,10 +16,10 @@
 
       - name: Retrieve Docker Compose file from backend repository
         get_url:
-          url: "https://raw.githubusercontent.com/Abhisek1906/SPE_Major_TourGuide/main/docker-compose.yml"
-          dest: "/home/user/docker-compose.yml"
+          url: "https://raw.githubusercontent.com/Abhisek1906/SPE_Major_TourGuide/master/deploy-docker/docker-compose.yml"
+          dest: "/home/"
 
       - name: Start Docker Compose stack
         shell: docker-compose up -d
         args:
-          chdir: /home/user
+          chdir: /home/
