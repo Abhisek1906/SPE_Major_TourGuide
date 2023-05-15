@@ -66,12 +66,15 @@ public class AuthenticationService {
        if(authentication.isAuthenticated()){
            var user=repo.findByEmail(request.getEmail())
                    .orElseThrow();
+
+           System.out.println("user"+user);
            var jwtToken= jwtService.generateToken(user);
            return AuthenticationResponse.builder()
                    .id(user.getId())
                    .token(jwtToken)
                    .build();
        }else{
+           System.out.println("invalid user");
            throw new UsernameNotFoundException("invalid user request!");
        }
 

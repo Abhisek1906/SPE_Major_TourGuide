@@ -34,7 +34,7 @@ public class Accommodation {
 
     private int starRating;
 
-    private String phoneNo;
+
 
     private String description;
 

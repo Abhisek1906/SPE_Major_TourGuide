@@ -20,13 +20,12 @@ public class SecurityConfig {
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception{
         http
-                .csrf()
+                .cors().and().csrf()
                 .disable()
                 .authorizeHttpRequests()
-                .requestMatchers("/api/v1/auth/**")
+                .requestMatchers("/api/v1/auth/**","/admin/**","/user/**")
                 .permitAll()
                 .requestMatchers("/user/**").hasRole("USER")
-                .requestMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest()
                 .authenticated()
                 .and()
