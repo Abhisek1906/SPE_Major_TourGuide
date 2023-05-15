@@ -1,8 +1,10 @@
 
 FROM openjdk:17
 
-# Install MySQL client
-RUN apk add --no-cache mysql-client
+## Install MySQL client
+RUN apt-get update && \
+    apt-get install -y mysql-client && \
+    rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 COPY target/spe-major-backend.jar /app/spe-major-backend.jar
