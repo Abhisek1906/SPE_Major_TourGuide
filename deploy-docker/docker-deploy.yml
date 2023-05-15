@@ -1,0 +1,25 @@
+---
+- name: docker-compose
+  hosts: all
+  tasks:
+
+    tasks:
+      - name: Install Docker
+        apt:
+          name: docker.io
+          state: present
+
+      - name: Install Docker Compose
+        apt:
+          name: docker-compose
+          state: present
+
+      - name: Retrieve Docker Compose file from backend repository
+        get_url:
+          url: "https://raw.githubusercontent.com/Abhisek1906/SPE_Major_TourGuide/main/docker-compose.yml"
+          dest: "/home/user/docker-compose.yml"
+
+      - name: Start Docker Compose stack
+        shell: docker-compose up -d
+        args:
+          chdir: /home/user
