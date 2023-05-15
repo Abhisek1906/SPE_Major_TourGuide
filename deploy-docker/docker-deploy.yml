@@ -2,8 +2,6 @@
 - name: docker-compose
   hosts: all
   tasks:
-
-    tasks:
       - name: Install Docker
         apt:
           name: docker.io
