@@ -36,6 +36,7 @@ public class AuthenticationService {
                     .token(jwtToken)
                     .build();
 
+
         }else{
             var user= User.builder()
                     .firstname((request.getFirstname()))
@@ -56,6 +57,7 @@ public class AuthenticationService {
     public AuthenticationResponse authenticate(AuthenticationRequest request) {
 
         // If the user is a valid user then only give the token.
+        System.out.println(request);
        Authentication authentication= authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(
                         request.getEmail(),

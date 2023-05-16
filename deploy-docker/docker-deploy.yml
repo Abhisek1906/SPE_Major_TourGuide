@@ -20,9 +20,9 @@
       - name: Start Docker Compose stack
         shell: docker-compose up -d
 
-      - name: Wait for 1 minutes
+      - name: Wait for 10 minutes
         pause:
-          seconds: 60
+          seconds: 600
 
       - name: Stop Docker Compose stack
         shell: docker-compose down
