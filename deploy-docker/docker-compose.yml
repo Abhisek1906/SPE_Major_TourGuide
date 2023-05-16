@@ -69,6 +69,7 @@ services:
 #      net_ubuntu:
 #        ipv4_address: 172.28.1.8
 
+
   Logstash:
     image: logstash:7.16.2
     container_name: logstash
