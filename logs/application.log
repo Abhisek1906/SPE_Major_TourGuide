@@ -1,0 +1,82 @@
+2023-05-16 13:27:45,878 [main] INFO  c.e.tourguide.TourGuideApplication - Starting TourGuideApplication using Java 17.0.6 with PID 83631 (/home/faraz/Desktop/SPE_Major_TourGuide/target/classes started by faraz in /home/faraz/Desktop/SPE_Major_TourGuide)
+2023-05-16 13:27:45,879 [main] INFO  c.e.tourguide.TourGuideApplication - No active profile set, falling back to 1 default profile: "default"
+2023-05-16 13:27:46,151 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16 13:27:46,188 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 33 ms. Found 10 JPA repository interfaces.
+2023-05-16 13:27:46,430 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8081 (http)
+2023-05-16 13:27:46,434 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8081"]
+2023-05-16 13:27:46,434 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2023-05-16 13:27:46,434 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-16 13:27:46,473 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-05-16 13:27:46,474 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 573 ms
+2023-05-16 13:27:46,529 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16 13:27:46,552 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16 13:27:46,690 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-16 13:27:46,779 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1fc0d9b4
+2023-05-16 13:27:46,779 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-16 13:27:46,812 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-16 13:27:47,275 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16 13:27:47,279 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16 13:27:47,543 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16 13:27:47,663 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@496004e3, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@df34b01, org.springframework.security.web.context.SecurityContextHolderFilter@79735611, org.springframework.security.web.header.HeaderWriterFilter@550e7ef6, org.springframework.web.filter.CorsFilter@703947bd, org.springframework.security.web.authentication.logout.LogoutFilter@1fc4b8d6, com.example.tourguide.Config.JwtAuthenticationFilter@5b407336, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@4d2f8ee7, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@498f1f63, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@f31b991, org.springframework.security.web.session.SessionManagementFilter@4197e859, org.springframework.security.web.access.ExceptionTranslationFilter@30b29f55, org.springframework.security.web.access.intercept.AuthorizationFilter@f9979cf]
+2023-05-16 13:27:47,727 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8081"]
+2023-05-16 13:27:47,734 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8081 (http) with context path ''
+2023-05-16 13:27:47,738 [main] INFO  c.e.tourguide.TourGuideApplication - Started TourGuideApplication in 2.037 seconds (process running for 2.425)
+2023-05-16 13:28:31,368 [http-nio-8081-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-05-16 13:28:31,368 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-05-16 13:28:31,369 [http-nio-8081-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+2023-05-16 13:28:31,522 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16 13:28:31,589 [http-nio-8081-exec-2] DEBUG org.hibernate.SQL - select u1_0.id,u1_0.email,u1_0.firstname,u1_0.lastname,u1_0.password,u1_0.role from user u1_0 where u1_0.email=?
+2023-05-16 13:28:36,123 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select r1_0.region_id,r1_0.region_name from region r1_0 where r1_0.region_name=?
+2023-05-16 13:28:36,123 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select r1_0.region_id,r1_0.region_name from region r1_0 where r1_0.region_name=?
+2023-05-16 13:28:36,131 [http-nio-8081-exec-5] DEBUG org.hibernate.SQL - select p1_0.region_id,p1_0.id,p1_0.culture,p1_0.customs,p1_0.description,p1_0.history,p1_0.images,p1_0.name from place p1_0 where p1_0.region_id=?
+2023-05-16 13:28:36,131 [http-nio-8081-exec-6] DEBUG org.hibernate.SQL - select p1_0.region_id,p1_0.id,p1_0.culture,p1_0.customs,p1_0.description,p1_0.history,p1_0.images,p1_0.name from place p1_0 where p1_0.region_id=?
+2023-05-16 13:28:36,133 [http-nio-8081-exec-5] INFO  c.e.t.Controller.UserController - found all places for the region
+2023-05-16 13:28:36,133 [http-nio-8081-exec-6] INFO  c.e.t.Controller.UserController - found all places for the region
+2023-05-16 13:28:39,870 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.culture,p1_0.customs,p1_0.description,p1_0.history,p1_0.images,p1_0.name,p1_0.region_id from place p1_0 where p1_0.name=?
+2023-05-16 13:28:39,870 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select p1_0.id,p1_0.culture,p1_0.customs,p1_0.description,p1_0.history,p1_0.images,p1_0.name,p1_0.region_id from place p1_0 where p1_0.name=?
+2023-05-16 13:28:39,876 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select r1_0.region_id,r1_0.region_name from region r1_0 where r1_0.region_id=?
+2023-05-16 13:28:39,876 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select r1_0.region_id,r1_0.region_name from region r1_0 where r1_0.region_id=?
+2023-05-16 13:28:39,878 [http-nio-8081-exec-10] DEBUG org.hibernate.SQL - select a1_0.accommodation_id,a1_0.id,a1_0.additional_bathroom,a1_0.address,a1_0.air_conditioning,a1_0.bar,a1_0.bath_robes,a1_0.cable,a1_0.description,a1_0.desk,a1_0.dinning_area,a1_0.fitness_center,a1_0.images,a1_0.internet,a1_0.map_location,a1_0.name,a1_0.number,a1_0.parking,a1_0.pool,a1_0.rate,a1_0.star_rating,a1_0.taxi_service,a1_0.type from accommodation a1_0 where a1_0.accommodation_id=?
+2023-05-16 13:28:39,878 [http-nio-8081-exec-9] DEBUG org.hibernate.SQL - select a1_0.accommodation_id,a1_0.id,a1_0.additional_bathroom,a1_0.address,a1_0.air_conditioning,a1_0.bar,a1_0.bath_robes,a1_0.cable,a1_0.description,a1_0.desk,a1_0.dinning_area,a1_0.fitness_center,a1_0.images,a1_0.internet,a1_0.map_location,a1_0.name,a1_0.number,a1_0.parking,a1_0.pool,a1_0.rate,a1_0.star_rating,a1_0.taxi_service,a1_0.type from accommodation a1_0 where a1_0.accommodation_id=?
+2023-05-16 13:28:39,879 [http-nio-8081-exec-10] INFO  c.e.t.Controller.UserController - got the accomodation
+2023-05-16 13:28:39,879 [http-nio-8081-exec-9] INFO  c.e.t.Controller.UserController - got the accomodation
+2023-05-16 13:30:39,194 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.tourguide.TourGuideApplicationTests]: TourGuideApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16 13:30:39,252 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.tourguide.TourGuideApplication for test class com.example.tourguide.TourGuideApplicationTests
+2023-05-16 13:30:39,447 [main] INFO  c.e.t.TourGuideApplicationTests - Starting TourGuideApplicationTests using Java 17.0.6 with PID 84877 (started by faraz in /home/faraz/Desktop/SPE_Major_TourGuide)
+2023-05-16 13:30:39,447 [main] INFO  c.e.t.TourGuideApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-05-16 13:30:39,744 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16 13:30:39,788 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 10 JPA repository interfaces.
+2023-05-16 13:30:40,055 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16 13:30:40,078 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16 13:30:40,227 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-16 13:30:40,333 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4628a02b
+2023-05-16 13:30:40,333 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-16 13:30:40,361 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-16 13:30:40,871 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16 13:30:40,875 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16 13:30:41,218 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16 13:30:41,416 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7207f3c2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@574134ba, org.springframework.security.web.context.SecurityContextHolderFilter@24fb8317, org.springframework.security.web.header.HeaderWriterFilter@598ff2b3, org.springframework.web.filter.CorsFilter@57063e08, org.springframework.security.web.authentication.logout.LogoutFilter@445c693, com.example.tourguide.Config.JwtAuthenticationFilter@5c0d3715, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f451970, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f836d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6afb240d, org.springframework.security.web.session.SessionManagementFilter@43414b88, org.springframework.security.web.access.ExceptionTranslationFilter@5aa5b3af, org.springframework.security.web.access.intercept.AuthorizationFilter@1cb73a92]
+2023-05-16 13:30:41,550 [main] INFO  c.e.t.TourGuideApplicationTests - Started TourGuideApplicationTests in 2.227 seconds (process running for 2.756)
+2023-05-16 13:30:41,660 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16 13:30:41,661 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-16 13:30:41,665 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-05-16 13:31:25,094 [main] INFO  o.s.t.c.s.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.tourguide.TourGuideApplicationTests]: TourGuideApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2023-05-16 13:31:25,170 [main] INFO  o.s.b.t.c.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.tourguide.TourGuideApplication for test class com.example.tourguide.TourGuideApplicationTests
+2023-05-16 13:31:25,349 [main] INFO  c.e.t.TourGuideApplicationTests - Starting TourGuideApplicationTests using Java 17.0.6 with PID 85159 (started by faraz in /home/faraz/Desktop/SPE_Major_TourGuide)
+2023-05-16 13:31:25,349 [main] INFO  c.e.t.TourGuideApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2023-05-16 13:31:25,663 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16 13:31:25,705 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 38 ms. Found 10 JPA repository interfaces.
+2023-05-16 13:31:25,947 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16 13:31:25,967 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16 13:31:26,089 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-05-16 13:31:26,179 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4628a02b
+2023-05-16 13:31:26,180 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-05-16 13:31:26,207 [main] INFO  SQL dialect - HHH000400: Using dialect: org.hibernate.dialect.MySQLDialect
+2023-05-16 13:31:26,755 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16 13:31:26,759 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16 13:31:27,080 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16 13:31:27,248 [main] INFO  o.s.s.web.DefaultSecurityFilterChain - Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@7207f3c2, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@574134ba, org.springframework.security.web.context.SecurityContextHolderFilter@24fb8317, org.springframework.security.web.header.HeaderWriterFilter@598ff2b3, org.springframework.web.filter.CorsFilter@57063e08, org.springframework.security.web.authentication.logout.LogoutFilter@445c693, com.example.tourguide.Config.JwtAuthenticationFilter@5c0d3715, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@f451970, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4f836d9, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6afb240d, org.springframework.security.web.session.SessionManagementFilter@43414b88, org.springframework.security.web.access.ExceptionTranslationFilter@5aa5b3af, org.springframework.security.web.access.intercept.AuthorizationFilter@1cb73a92]
+2023-05-16 13:31:27,357 [main] INFO  c.e.t.TourGuideApplicationTests - Started TourGuideApplicationTests in 2.121 seconds (process running for 2.606)
+2023-05-16 13:31:27,451 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16 13:31:27,452 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-05-16 13:31:27,456 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
