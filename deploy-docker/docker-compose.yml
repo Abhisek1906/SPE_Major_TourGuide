@@ -4,7 +4,7 @@ services:
     image: shmfaraz15/spe-major-frontend:latest
     container_name: clientnode
     ports:
-      - "3000:80"
+      - "3000:3000"
     networks:
       net_ubuntu:
         ipv4_address: 172.28.1.5
